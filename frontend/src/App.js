@@ -92,6 +92,8 @@ function App() {
         <button type="submit" className="submit-btn">Submit</button>
       </form>
       {error && <p className="error">{error}</p>}
+      {!response &&
+        <p className="note-info">NOTE: The backend is deployed on Render which undergoes a cold start whenever an API call is made for first time. Kindly wait for 40-50 seconds after making first API call.</p>}
       {response && (
         <div className="response-container">
           <div className="multi-filter">
